@@ -3,7 +3,7 @@
 ## Requirements
 
 * [Docker](https://www.docker.com/products/docker-desktop/) (Recommend to set the memory to above 8GB)
-* x86_64 CPU machine（Not impossible on ARM CPU with emulation, but it takes quite a long long time to build）
+* x86_64 CPU machine（Not ARM CPU）
 
 
 ## Build a docker image
