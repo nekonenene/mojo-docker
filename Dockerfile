@@ -2,11 +2,6 @@ FROM --platform=linux/amd64 ubuntu:22.04
 
 ARG modular_auth
 
-# RUN apt-get update && apt-get install -y \
-#     curl \
-#     && apt-get clean \
-#     && rm -rf /var/lib/apt/lists/*
-
 RUN apt-get update && apt-get install -y \
     curl \
     gpg \
@@ -18,8 +13,6 @@ RUN apt-get update && apt-get install -y \
     && apt-get install -y modular \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-# RUN curl https://get.modular.com | MODULAR_AUTH=${modular_auth} sh -
 
 RUN modular auth ${modular_auth} \
     && modular install mojo
