@@ -1,3 +1,5 @@
+import math
+
 fn main():
     print("Hello, world!")
     add_xy()
@@ -6,6 +8,9 @@ fn main():
     let y = 200
     let z = add(x, y)
     print(x, y, z)
+
+    print(math.round[DType.float32, 1](3.141592))
+    print(math.ceil[DType.float32, 1](3.141592))
 
 
 fn add(x: Int, y: Int) -> Int:
