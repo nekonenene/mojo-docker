@@ -22,7 +22,7 @@ RUN modular auth ${modular_auth} \
 RUN echo 'export MODULAR_HOME="$HOME/.modular"' >> ~/.bashrc \
     && echo 'export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"' >> ~/.bashrc
 
-# RUN sed -i -e "s/id =.*$//" /root/.modular/modular.cfg
+# RUN rm /root/.modular/modular.cfg
 
 WORKDIR /app
 
