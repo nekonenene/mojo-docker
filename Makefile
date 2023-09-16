@@ -1,4 +1,4 @@
-DOCKER_IMAGE_NAME := "mojo_image1"
+DOCKER_IMAGE_NAME := "nekonenene/mojo"
 
 .PHONY: build
 build:
