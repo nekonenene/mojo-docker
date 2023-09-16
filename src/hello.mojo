@@ -1,8 +1,11 @@
 fn main():
     print("Hello, world!")
     add_xy()
-    let x = add(100, 200)
-    print(x)
+
+    let x = 100
+    let y = 200
+    let z = add(x, y)
+    print(x, y, z)
 
 fn add(x: Int, y: Int) -> Int:
     print(x, "+", y, "=", x + y)
