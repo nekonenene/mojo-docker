@@ -7,6 +7,7 @@ RUN apt-get update \
         apt-transport-https \
         curl \
         gpg \
+        vim \
     && keyring_location=/usr/share/keyrings/modular-installer-archive-keyring.gpg \
     && curl -1sLf 'https://dl.modular.com/bBNWiLZX5igwHXeu/installer/gpg.0E4925737A3895AD.key' |  gpg --dearmor >> ${keyring_location} \
     && curl -1sLf 'https://dl.modular.com/bBNWiLZX5igwHXeu/installer/config.deb.txt?distro=debian&codename=wheezy' > /etc/apt/sources.list.d/modular-installer.list \
@@ -20,6 +21,8 @@ RUN modular auth ${modular_auth} \
 
 RUN echo 'export MODULAR_HOME="$HOME/.modular"' >> ~/.bashrc \
     && echo 'export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"' >> ~/.bashrc
+
+# RUN sed -i -e "s/id =.*$//" /root/.modular/modular.cfg
 
 WORKDIR /app
 
