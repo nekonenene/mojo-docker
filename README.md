@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Recommend to set the memory to above 8GB)
+* [Docker](https://www.docker.com/products/docker-desktop/) (Recommend to set the memory to above 8GB)
 * x86_64 CPU machine (Not ARM CPU)
 
 
