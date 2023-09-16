@@ -1,8 +1,15 @@
 fn main():
     print("Hello, world!")
-    add()
+    add_xy()
+    let x = add(100, 200)
+    print(x)
 
-fn add():
+fn add(x: Int, y: Int) -> Int:
+    print(x, "+", y, "=", x + y)
+    return x + y
+
+fn add_xy():
     var x: Int = 1
     x += 1
-    print(x)
+    let y = 2
+    print(x + y)
