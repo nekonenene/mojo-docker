@@ -24,6 +24,9 @@ RUN apt-get update && apt-get install -y \
 RUN modular auth ${modular_auth} \
     && modular install mojo
 
+RUN echo 'export MODULAR_HOME="$HOME/.modular"' >> ~/.bashrc \
+    && echo 'export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"' >> ~/.bashrc
+
 WORKDIR /app
 
 ENTRYPOINT ["/bin/bash"]
