@@ -7,9 +7,11 @@ fn main():
     let z = add(x, y)
     print(x, y, z)
 
+
 fn add(x: Int, y: Int) -> Int:
     print(x, "+", y, "=", x + y)
     return x + y
+
 
 fn add_xy():
     var x: Int = 1
