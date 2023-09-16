@@ -2,9 +2,10 @@ FROM --platform=linux/amd64 ubuntu:22.04
 
 ARG modular_auth
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    gpg \
+RUN apt-get update \
+    && apt-get install -y \
+        curl \
+        gpg \
     && apt-get install -y apt-transport-https \
     && keyring_location=/usr/share/keyrings/modular-installer-archive-keyring.gpg \
     && curl -1sLf 'https://dl.modular.com/bBNWiLZX5igwHXeu/installer/gpg.0E4925737A3895AD.key' |  gpg --dearmor >> ${keyring_location} \
